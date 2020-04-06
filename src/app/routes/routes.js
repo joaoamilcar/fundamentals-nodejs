@@ -11,4 +11,7 @@ module.exports = (app, port) => {
     app.get('/resource-2', function(req, res) {
         res.send('<html><head><meta charset="utf-8"></head><body><h1>resource two</h1></body></html>');
     });
+    app.get('/books', function(req, res) {
+        res.marko(require('../views/books/listing.marko'));
+    });
 }
